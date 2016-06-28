@@ -2,7 +2,6 @@ senna.RequestScreen.prototype.formatLoadPath = function(path) {
   var uri = new senna.Uri(path);
 
   uri.setHostname(window.location.hostname);
-  uri.setProtocol(window.location.protocol);
   uri.setPort(window.location.port);
 
   if (senna.UA.isIeOrEdge && this.httpMethod === senna.RequestScreen.GET) {
