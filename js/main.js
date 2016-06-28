@@ -5,10 +5,10 @@ senna.RequestScreen.prototype.formatLoadPath = function(path) {
   uri.setProtocol(window.location.protocol);
 
   if (senna.UA.isIeOrEdge && this.httpMethod === senna.RequestScreen.GET) {
-    return uri.makeUnique().toString();
+    return uri.makeUnique().toString() + '/';
   }
 
-  return uri.toString();
+  return uri.toString() + '/';
 };
 
 document.addEventListener('DOMContentLoaded', function() {
