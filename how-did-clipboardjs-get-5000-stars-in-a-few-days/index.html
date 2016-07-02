@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>How did clipboardjs get 5000 stars in a few days? // Zeno Rocha</title>
+  <title>How did Clipboard.js get 5000 stars in a few days? // Zeno Rocha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -43,7 +43,7 @@
 <body data-senna data-senna-surface>
   <div class="senna-loading-bar"></div>
 
-  <header class="site-header ">
+  <header class="site-header site-header-white">
     <a href="/" class="logo">zeno</a>
   
     <nav class="site-nav">
@@ -62,19 +62,26 @@
     </div>
   </header>
   <main class="post">
-    <header class="post-header">
-      <h1 class="post-title">How did clipboardjs get 5000 stars in a few days?</h1>
-      <div class="post-gradient"></div>
-      <div class="post-image" style="background-image: url(/img/posts/clipboard-5k.jpg)"></div>
-      <h2 class="post-subtitle">Oct 02, 2015</h2>
-    </header>
     <div class="post-content post-article">
+        <h1 class="post-title">How did Clipboard.js get 5000 stars in a few days?</h1>
+        <h2 class="post-subtitle">Oct 02, 2015</h2>
 
       <p>On Monday I open sourced a SUPER simple <a href="https://clipboardjs.com/">Copy to Clipboard library</a>.</p>
 <p><a href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=clipboard.js&amp;src=typd">Everybody went crazy</a>.</p>
 <p>Today is Friday and there are more than 5,000 stars on that GitHub repository.</p>
 <p>Somebody asked me <a href="https://github.com/zenorocha/clipboard.js/issues/56">&quot;how did the repo achieve this impressive feat&quot;</a>? And few people answered that it was because of <a href="https://news.ycombinator.com/item?id=10301881">Hacker News</a>.</p>
-<p><strong><a href="https://medium.com/@zenorocha/how-did-clipboard-js-get-5000-stars-in-a-few-days-2b2248ba7bd8">Continue reading…</a></strong></p>
+<p>But the truth is, <strong>it has nothing to do with Hacker News</strong>. Here are few different factors that contributed to that:</p>
+<ul>
+<li><strong>Experience:</strong> I’ve been <a href="/most-active-contributors-on-github">working with open source</a> for a while now. I gave more than <a href="/talks">70 talks</a> and built <a href="/projects">many projects over the last years</a>. There was a LOT of hard work involved and lessons learned along the way.</li>
+<li><strong>Credibility:</strong> Because of all those things I’ve done, lots of people started to follow me not only on <a href="https://github.com/zenorocha/">GitHub</a> (~3k) but also on <a href="https://twitter.com/zenorocha">Twitter</a> (~20k). I try to offer as much value as I can for those followers <strong>every day</strong>. That translates to a broader reach whenever I need to share something I’ve built.</li>
+<li><strong>Docs &amp; demos:</strong> 99% of developers complain that nobody cares about their code on GitHub. How you expect people to use something if you don’t teach them? My advice is that you need to spend more time writing and improving your documentation than writing code.</li>
+<li><strong>Timing:</strong> On September 1, I read this article about <a href="https://hacks.mozilla.org/2015/09/flash-free-clipboard-for-the-web/">Mozilla starting to support execCommand</a>. At that article they said <em>“Firefox 41, which is currently in Beta, and slated to move to release in mid-September”</em>. I realized that was the missing part for this API to be adopted broadly. I wrote clipboard.js in a private repo and waited until <a href="https://developer.mozilla.org/en-US/Firefox/Releases/41">Firefox 41 was released</a>.</li>
+<li><strong>Working is not enough:</strong> Most developers just make things work and that’s it. I spent a good amount of time trying to make this library smaller, trying to make the public API easier, and refactoring the source code for better readability.</li>
+<li><strong>Knowing your audience:</strong> Everybody hates Flash and everybody hates bloated frameworks. Everybody loves a simple API and everybody loves GitHub’s copy to clipboard. If you don’t know your audience, you don’t know how to create something they’ll like.</li>
+</ul>
+<blockquote>
+<p>That’s not everything, but I hope it encourage folks to realize that it’s not just about coding.</p>
+</blockquote>
 
     </div>
   </main>
