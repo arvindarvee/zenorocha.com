@@ -71,8 +71,40 @@
     <div class="post-content post-article">
 
       <p>In a world where you can create your own <code>&lt;awesome-button&gt;</code> tag and distribute it with a simple <code>&lt;link rel=&quot;import&quot; href=&quot;awesome-button.html&quot;&gt;</code>, a whole range of options for composability and reusability emerges.</p>
-<p>Web Components are coming and there are many challenges coming along. How we connect component authors with component consumers is one of them.</p>
-<p><strong><a href="https://medium.com/@zenorocha/discoverability-for-web-components-72ce29f128b2">Continue reading…</a></strong></p>
+<p><a href="http://webcomponents.org/">Web Components</a> are coming and there are many challenges coming along. How we connect component authors with component consumers is one of them.</p>
+<h1 id="amd-commonjs-html-imports-es6-modules-">AMD? CommonJS? HTML Imports? ES6 Modules?</h1>
+<p>Dependency management has always been a trouble for client-side developers.</p>
+<p>We started defining global variables but one could not ensure that the same global variable name wasn&#39;t used in a page already. Then, module specs like <em>AMD</em> and <em>CommonJS</em> appeared but the community never came to a consensus on which one to use.</p>
+<p>Now, <em>EcmaScript 6</em> and <em>Web Components</em> are coming and they both introduce a different approach to dependency management.</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { MyDependency } <span class="hljs-keyword">from</span> <span class="hljs-string">"my-dependency"</span>;</code></pre>
+
+<p>vs</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"import"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"my-dependency.html"</span>&gt;</span></code></pre>
+
+<p>It&#39;s still unclear how they&#39;ll interoperate but being able to package templates, images, styles, and scripts into one file is not only appealing but a key factor in making Web Components truly successful (<a href="https://hacks.mozilla.org/2014/12/mozilla-and-web-components/">despite browser vendor disagreements</a>).</p>
+<h1 id="npm-jspm-bower-component-">npm? jspm? bower? component?</h1>
+<p>Speaking about lack of consensus, nowadays there&#39;s a clear fragmentation in the front-end package management world as well.</p>
+<p>New tools like <a href="http://spmjs.io/">spm</a>, <a href="http://jamjs.org/">jam</a>, and <a href="http://volojs.org/">volo</a> appears everyday. In the meanwhile, developers still struggle between choosing <em>Bower</em> or <em>npm</em>.</p>
+<p><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;What is Bower?&quot;<br>&quot;A package manager&quot;<br>&quot;How do I install it?&quot;<br>&quot;Use npm&quot;<br>&quot;What&#39;s npm?&quot;<br>&quot;A package manager&quot;<br>&quot;....&quot;</p>&mdash; Jakob Homan (@BlueBoxTraveler) <a href="https://twitter.com/BlueBoxTraveler/status/453685413115203584">April 9, 2014</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Sure, everybody loves <em>npm</em>. It works well, it’s <a href="http://status.npmjs.org/">reliable</a>, many communities are <a href="http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick">moving</a> <a href="http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html">there</a>, and they got some <a href="https://www.crunchbase.com/organization/npm">serious funding</a> which indicates continuous development.</p>
+<p>However, the way it handles dependencies isn’t suitable for the web. Unless you want different versions of the same library loaded in your page. That&#39;s why some people still prefer <em>Bower</em> because it manages dependencies in a flat tree. <a href="https://github.com/npm/npm/wiki/npm-%E2%87%94-Polymer-brainstorming-session">Hopefully</a>, this will be solved on <a href="https://github.com/npm/npm/wiki/Roadmap">npm@3</a>.</p>
+<h1 id="gallery-registry-search-">gallery? registry? search?</h1>
+<p>There are many different approaches that could improve how people find what components they need.</p>
+<p>For instance, we could build a new registry just like <em>npm</em> and <em>Bower</em>. But let&#39;s face it, no one wants to install another <em>CLI</em> or include another configuration file in their repositories.</p>
+<p>Another solution would be having a curated list of <em>Web Components</em>. That’s actually how we started <a href="https://customelements.io/">CustomElements.io</a>, it was a gallery where people would manually submit their projects. But soon we realized that if we wanted to scale that was not an option anymore.</p>
+<blockquote>
+<p>90% percent of everything is crap — Sturgeon’s law</p>
+</blockquote>
+<p>The way I see it, a powerful discoverability tool for <em>Web Components</em> should be able to scrape those package managers and provide information that would help developers to make decisions about what third-party component to use, regardless of where it’s registered.</p>
+<p>And that&#39;s what we&#39;re trying to do. We&#39;re building a new <a href="https://customelements.io/">CustomElements.io</a> to better connect component authors with component consumers.</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/2000/1*sZNZ7KJ-HYcO1HuTvlp1FA.png" alt=""></p>
+<p>Built on top of <a href="https://nodejs.org/">Node</a>, <a href="http://hapijs.com/">Hapi</a>, <a href="https://www.elastic.co/">ElasticSearch</a>, and <a href="http://webcomponents.org/">Web Components</a> (why not?), we hope to serve the community with a much better discoverability experience. For now, we&#39;re introducing a new design and architecture, expect more really cool features pretty soon.</p>
+<p>As always, ideas are welcome on <a href="https://github.com/customelements/www">GitHub</a>.</p>
+<blockquote>
+<p>Thanks to <a href="https://twitter.com/keppelen">Giovanni Keppelen</a> and <a href="https://twitter.com/italowaxman">Italo Waxman</a>.</p>
+</blockquote>
 
     </div>
   </main>
