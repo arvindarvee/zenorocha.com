@@ -63,43 +63,43 @@
   </header>
   <main class="post">
     <div class="post-content post-article">
-        <h1 class="post-title">The importance of CDN</h1>
-        <h2 class="post-subtitle">Mar 11, 2013</h2>
+      <div class="post-container">
+          <h1 class="post-title">The importance of CDN</h1>
+          <h2 class="post-subtitle">Mar 11, 2013</h2>
 
-      <p><em><a href="http://imasters.com.br/desenvolvimento/a-importancia-de-uma-cdn/">Leia em Português.</a></em></p>
+        <p><em><a href="http://imasters.com.br/desenvolvimento/a-importancia-de-uma-cdn/">Leia em Português.</a></em></p>
 <p>Some weeks ago we announced the preview release of <a href="http://alloyui.com">AlloyUI 2.0</a>. One of the cool things about it is that now we have a pretty new <a href="http://en.wikipedia.org/wiki/Content_delivery_network">CDN (Content Delivery Network)</a>. So instead of downloading AlloyUI to use in your local environment, you just to need copy and paste this line of code and start using it.</p>
 <!-- more -->
-<pre class="prettyprint lang-html">
-&lt;script src="http://cdn.alloyui.com/2.0.0pr2/aui/aui-min.js"&gt;&lt;/script&gt;
-</pre>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://cdn.alloyui.com/2.0.0pr2/aui/aui-min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
 
 <h2 id="why-it-s-so-important-to-use-a-file-hosted-on-a-cdn-">Why it&#39;s so important to use a file hosted on a CDN?</h2>
 <p>Basically for performance improvements, we&#39;ll dig into some of them.</p>
 <h3 id="decrease-latency">Decrease latency</h3>
 <p>Let&#39;s say you are in China and your server is in Los Angeles. When you load a file the browsers sends a HTTP request that will go across the globe until reach your server and, as you can see, it takes time.</p>
 <p>However if this file is hosted on a CDN it will be distributed across many different servers in the world. So when you make a request, it will look for the nearest server, which decreases latency time a lot.</p>
-<p><img src="http://cl.ly/image/3T0C3y3I1j0U/vs.jpg" alt="Tradicional scheme vs CDN scheme of distribution"></p>
+<p><img src="http://imasters.com.br/wp-content/uploads/2013/03/1.jpg" alt="Tradicional scheme vs CDN scheme of distribution"></p>
 <p><em>Image: Traditional scheme of distribution vs CDN scheme of distribution</em></p>
 <h3 id="more-parallel-downloads">More parallel downloads</h3>
 <p>Browsers can&#39;t handle too many parallel downloads per domain.</p>
-<p><img src="http://www.liferay.com/documents/14644916/0/1.jpg/a3b4fd89-50a4-4877-bbae-1a7b9d74ca2e?t=1362421179742" alt="Not much parallel downloads"></p>
+<p><img src="http://imasters.com.br/wp-content/uploads/2013/03/2.jpg" alt="Not much parallel downloads"></p>
 <p>That&#39;s why hosting files in different domains is a good performance tip.</p>
-<p><img src="http://www.liferay.com/documents/14644916/0/2.jpg/17f8f56e-12bf-4f83-a6a2-f1f224985bf1?t=1362421254877" alt="Not much parallel downloads"></p>
+<p><img src="http://imasters.com.br/wp-content/uploads/2013/03/3.jpg" alt="Not much parallel downloads"></p>
 <h3 id="cache">Cache</h3>
 <p>Let&#39;s say you visited a website that uses AlloyUI hosted on CDN, as soon as you load it your browser will automatically cache it in your machine. Then if you visit another website that uses AlloyUI too, you don&#39;t need to download all those files again because you already have cached them.</p>
 <h2 id="what-s-the-real-benefit-">What&#39;s the real benefit?</h2>
 <p>Let&#39;s try those performance improvements in real life. My experiment will load the exact same file using a CDN and don&#39;t using it.</p>
 <p><strong>Didn&#39;t use CDN:</strong></p>
-<p><img src="http://f.cl.ly/items/2s0n1B3N3E0E1D0B3x26/no-cdn.jpg" alt="Didn&#39;t use CDN"></p>
+<p><img src="http://imasters.com.br/wp-content/uploads/2013/03/4.jpg" alt="Didn&#39;t use CDN"></p>
 <p>When you load <a href="http://js.liferay.com/aui/2.0.0pr2/aui/aui-min.js">this file</a>, that is not hosted on a CDN with a 10mb internet connection, you take 1.27 seconds with 404ms of latency.</p>
 <p><strong>Use CDN:</strong></p>
-<p><img src="http://cl.ly/image/3f310V0c3G1e/cdn.jpg" alt="Use CDN"></p>
+<p><img src="http://imasters.com.br/wp-content/uploads/2013/03/5.jpg" alt="Use CDN"></p>
 <p>But when you load <a href="http://cdn.alloyui.com/2.0.0pr2/aui/aui-min.js">this file</a>, that is now hosted on a CDN with the same internet connection, you take 314ms with 155ms of latency.</p>
 <p>That&#39;s a 75% decrease and this is only one file!</p>
 <p>Now imagine a lot of modules and its dependencies being loaded, it will cause a significant difference.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>And that&#39;s all folks! If you have any questions please comment below :)</p>
 
+      </div>
     </div>
   </main>
 
